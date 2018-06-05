@@ -70,3 +70,30 @@ body {
         height: 350px;
         background: orange;
     }
+    .tri-proizvodi li img {
+        margin: 40px 86px 0 86px;
+
+    }
+    .tri-proizvodi li p {
+        font-size: 14px;
+        font-family: Arial;
+        color: black;
+        line-height: 24px;
+        text-align: center;
+
+    }
+    .tri-proizvodi li a {
+        display: black;
+        width: 150px;
+        height: 31px;
+        background: blue;
+        color: white;
+        text-align: center;
+        font-size: 18px;
+        font-family: Arial;
+        text-decoration: none;
+        padding: 9px 0 0 0;
+        border-radius: 10px;
+        margin:0 75px 0 75 px;
+
+    }
