@@ -1,3 +1,72 @@
 body {
     background: red;
+    margin: 0;
+    padding: 0;
 }
+.main {
+    width: 900px;
+    height: 1500px;
+    background: blue;
+    margin: 0 auto 0 auto;
+}
+    .logo {
+        width: 180px;
+        height: 50px;
+        margin: 20px 0 0 20px;
+    }
+    header {
+        background: white;
+        width: 900px;
+        height: 100px;
+    }
+    nav {
+        width: 500px;
+        height: 100px;
+        float: right;
+    }
+    .navigacija {
+        width: 500px;
+        height: 100px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .navigacija li {
+        float: left;
+        margin:40px 40px 0 0;
+    }
+    .navigacija li a {
+        color: black;
+        text-decoration: none;
+        text-transform:  uppercase;
+        font-family: Arial;
+    }
+    .navigacija li a:hover {
+        color:red;
+    }
+    .slider {
+        width: 900px;
+        height: 500px;
+    }
+    .slider img {
+        width: 900px;
+        height: 500px;
+    }
+    .proizvodi {
+        width: 900px;
+        height: 350;
+        background: green;
+    }
+    .tri-proizvodi {
+        width: 900px;
+        height: 350px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background: purple;
+    }
+    .tri-proizvodi li {
+        width: 300px;
+        height: 350px;
+        background: orange;
+    }
