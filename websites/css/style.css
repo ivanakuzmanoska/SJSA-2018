@@ -6,7 +6,7 @@ body {
 .main {
     width: 900px;
     height: 1500px;
-    background: blue;
+    background: white;
     margin: 0 auto 0 auto;
 }
     .logo {
@@ -54,21 +54,24 @@ body {
     }
     .proizvodi {
         width: 900px;
-        height: 350;
-        background: green;
+        height: 350px;
     }
     .tri-proizvodi {
         width: 900px;
-        height: 350px;
+        height: 349px;
         margin: 0;
         padding: 0;
         list-style: none;
-        background: purple;
+        border-bottom: 1px solid black;
     }
     .tri-proizvodi li {
-        width: 300px;
+        width: 299px;
         height: 350px;
-        background: orange;
+        float: left;
+        border-right: 1px solid black;
+    }
+    .tri-proizvodi li:last-child {
+        border:0;
     }
     .tri-proizvodi li img {
         margin: 40px 86px 0 86px;
@@ -83,7 +86,7 @@ body {
 
     }
     .tri-proizvodi li a {
-        display: black;
+        display: block;
         width: 150px;
         height: 31px;
         background: blue;
@@ -94,6 +97,9 @@ body {
         text-decoration: none;
         padding: 9px 0 0 0;
         border-radius: 10px;
-        margin:0 75px 0 75 px;
-
+        margin:0 75px 0 75px;
+    }
+    .tri-proizvodi li a:hover {
+        color: black;
+        background: yellow;
     }
