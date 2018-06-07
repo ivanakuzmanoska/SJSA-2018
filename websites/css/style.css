@@ -147,3 +147,48 @@ body {
         height: 50px;
         float: left;
     }
+    footer {
+        width: 900px;
+        height: 300px;
+        background-color: orange;
+    }
+    .footer {
+        width: 900px;
+        height: 350px;
+        background-color: blue;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .footer li {
+        width: 225px;
+        height: 300px;
+        background-color: white;
+        float: left;
+    }
+    .footer li:nth-child(even) {
+        opacity: .5;
+    }
+    .footer li h1 {
+        margin: 0;
+        padding: 0;
+    }
+    .footer li p {
+        font-size : 13px;
+        line-height: 20px;
+        padding: 0 20px;
+        text-align: justify;
+    }
+    .footer li a {
+        display: block;
+        width: 120px;
+        height: 40px;
+        background-color: red;
+        color:white;
+        text-decoration: none;
+        text-align: center;
+        /*padding: 10px 0 0 0;*/
+        margin: 0 auto;
+        line-height: 40px;
+
+    }
