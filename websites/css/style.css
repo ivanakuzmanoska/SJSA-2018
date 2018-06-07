@@ -103,3 +103,47 @@ body {
         color: black;
         background: yellow;
     }
+    .tri-proizvodi li:hover {
+        background: rgba(0, 0, 0, .1)
+    }
+    .tri-proizvodi li:hover img {
+        opacity: .5;
+    }
+    .testimonials {
+        width: 900px;
+        height: 250px;
+        background-color:grey;
+    }
+    .testimonials h1{
+        margin:50px 0 20px 0;
+        text-align: center;
+        float: left;
+        color: white;
+        padding: 0 150px;
+    
+    }
+    .ime-prezime {
+        width: 350px;
+        height: 100px;
+        margin: 0 auto;
+        color: white;
+    }
+    .ime-prezime img {
+        width: 80px;
+        height: 80px;
+        border-radius: 45px;
+        border: 5px solid gray;
+        float: left;
+        margin: 5px 30px 0 30px;
+    }
+    .ime-prezime h3 {
+        margin: 20px 0 0 0;
+        padding: 0;
+        font-size: 30px;
+        float: left;
+    }
+    .ime-prezime span {
+        /*width: 150px;*/
+        height: 50px;
+        float: left;
+    }
