@@ -1,0 +1,119 @@
+body {
+    margin: 0;
+    padding:0;
+    background-color: rgb(117, 80, 80);
+    font-family: Arial, sans-serif;
+}
+.wrapper {
+        width: 900px;
+        /*height: 1500px;*/
+        background-color: gray;
+        margin: 10px auto;
+        padding: 10px;
+}
+header {
+    width: 900px;
+    height:300px;
+    background-color: white;
+}
+header img {
+    width:200px;
+    height: 55px;
+    margin: 50px 0 0 50px;
+}
+ul.header-nav {
+    margin: 50px 0 0 50px;
+    padding: 0;
+    list-style: none;
+    width: 500px;
+    height: 100px;
+}
+ul.header-nav li {
+    float: left;
+    margin: 0 20px 0 0;
+    border-right: 1px solid black;
+    padding-right: 20p;
+    padding: 0 20px 0 0;
+}
+ul.header-nav li:last-child {
+    border: 0;
+    padding: 0;
+
+}
+ul.header-nav li a {
+    color:black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+section {
+    width: 900px;
+    height: 150px;
+    background-color: rgb(179, 127, 154);
+    margin: 10px 0 0 0;
+
+}
+section h1 {
+    margin: 30px 0 0 0;
+    padding: 0 170px;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    float: left;
+
+     /* font-weight: 400; =regular 
+    ffont-weight: 700; = bold; */
+}
+article {
+    width: 900px;
+    background-color: aquamarine;
+    margin: 10px 0 0 0;
+    padding: 50px;
+    box-sizing: border-box;
+}
+article h1 {
+    margin: 0;
+    padding: 0;
+}
+article img {
+    height: 150px;
+}
+.link-slika {
+    width: 150px;
+    height: 150px;
+    background-image: url(../img/slika2.jpg);
+    display: block;
+}
+.article2 {
+    background-color: green;
+}
+footer {
+    width: 900px;
+    height: 300px;
+    background-color:orange;
+    margin: 10px 0 0 0;
+    padding: 50px;
+    box-sizing: border-box;
+
+}
+footer p {
+    width: 500px;
+    color: white;
+    line-height: 34px;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+ul.footer-nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+ul.footer-nav li {
+
+}
+ul.footer-nav a {
+    color: blue;
+
+}
+
+   
