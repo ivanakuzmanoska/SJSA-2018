@@ -1,0 +1,146 @@
+body {
+	background: white;
+	margin: 0;
+	padding: 0;
+	font-family: Cinzel;
+}
+.main {
+	width: 900px;
+	height:1500px;
+	background: aliceblue;
+	margin:0 auto 0 auto;
+}
+.logo {
+	width: 400px;
+	height: 90px;
+	margin: 25px 0 0 20px;
+}
+header {
+	background: white;
+	width: 880px;
+	height: 200px;
+	margin:0 10px 0 10px;
+}
+nav {
+	background: white;
+	width: 800px;
+	height: 60px;
+	padding: 10px;
+	list-style-type: none;
+	text-align: center;
+}
+.navigacija {
+	width: 800px;
+	height: 100px;
+	list-style: none;
+
+}
+.navigacija li {
+    display: inline-block;
+    font-size: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-right: solid;
+}
+.navigacija li:last-child {
+        border:0;
+}
+.navigacija li a {
+	color: black;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.navigacija li a:hover {
+	color: midnightblue;
+}
+.glavnaporaka {
+	background: lightsalmon;
+	width: 880px;
+	height: 150px;
+	margin: 0 10px 0 10px;
+	text-decoration: none;
+}
+.glavnaporaka h1 {
+	display: block;
+	color: black;
+	text-align: center;
+	padding: 40px ;
+}
+.prv-article {
+	background: aquamarine;
+	width: 880px;
+	height: 270px;
+	margin:0 10px 0 10px;
+}
+.prv-article h1 {
+	margin: 30px;
+	padding: 20px 0 0 0;
+}
+.prv-article p {
+	text-align: center;
+	margin: 0px 20px 20px 20px;
+	font-size: 14px;
+}
+.prv-article a {
+	margin: 20px 20px 20px 20px;
+}
+.vtor-article {
+	background: orange;
+	width: 880px;
+	height: 330px;
+	margin:0 10px 0 10px;
+}
+.vtor-article h2{
+	margin: 20px;
+	padding: 10px 0 0 10px;
+}
+.vtor-article p {
+	text-align: center;
+	margin: 0px 20px 20px 20px;
+	font-size: 14px;
+}
+.slider {
+	list-style-type: none;
+	text-decoration: none;
+ }
+.slider img {
+	float: left;
+	margin: 5px 5px 5px 5px;
+	width: 250px;
+	height: 170px;
+}
+	/*
+}
+.vtor-article img {
+	display: block;
+	width: 250px;
+	height: 170px;
+	float: left; 
+	margin: 5px 30px 5px 30px;
+} */
+footer {
+	background: yellow;
+	width: 880px;
+	height: 200px;
+	margin:10px 10px 0 10px;
+}
+footer h3 {
+	color:white;
+}
+.zavrsen-tekst {
+	text-align: center;
+	margin: 0px 20px 0 20px;
+	font-size: 14px;
+	color: white;
+	line-height: 30px;
+}
+.footer {
+        list-style: none;
+        float: left;
+        background: yellow;
+    }
+    .footer li a {
+        color: blue ;
+        text-decoration: underline; 
+        background: yellow;
+    }
