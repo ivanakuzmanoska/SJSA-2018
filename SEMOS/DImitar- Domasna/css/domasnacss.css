@@ -66,35 +66,35 @@ nav {
 	text-align: center;
 	padding: 40px ;
 }
-.prv-article {
+article.prv-article {
 	background: aquamarine;
 	width: 880px;
 	height: 270px;
 	margin:0 10px 0 10px;
 }
-.prv-article h1 {
+article.prv-article h1 {
 	margin: 30px;
 	padding: 20px 0 0 0;
 }
-.prv-article p {
+article.prv-article p {
 	text-align: center;
 	margin: 0px 20px 20px 20px;
 	font-size: 14px;
 }
-.prv-article a {
+article.prv-article a {
 	margin: 20px 20px 20px 20px;
 }
-.vtor-article {
+article.vtor-article {
 	background: orange;
 	width: 880px;
 	height: 330px;
 	margin:0 10px 0 10px;
 }
-.vtor-article h2{
+article.vtor-article h2{
 	margin: 20px;
 	padding: 10px 0 0 10px;
 }
-.vtor-article p {
+article.vtor-article p {
 	text-align: center;
 	margin: 0px 20px 20px 20px;
 	font-size: 14px;
@@ -109,38 +109,44 @@ nav {
 	width: 250px;
 	height: 170px;
 }
-	/*
-}
-.vtor-article img {
-	display: block;
-	width: 250px;
-	height: 170px;
-	float: left; 
-	margin: 5px 30px 5px 30px;
-} */
 footer {
-	background: yellow;
+	background:cornflowerblue;
 	width: 880px;
 	height: 200px;
 	margin:10px 10px 0 10px;
 }
+footer nav {
+	background:cornflowerblue;
+}
 footer h3 {
 	color:white;
+	margin: 20px;
+	padding: 10px 10px 0 10px;
 }
 .zavrsen-tekst {
 	text-align: center;
-	margin: 0px 20px 0 20px;
 	font-size: 14px;
 	color: white;
-	line-height: 30px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0;
 }
 .footer {
-        list-style: none;
-        float: left;
-        background: yellow;
-    }
-    .footer li a {
-        color: blue ;
-        text-decoration: underline; 
-        background: yellow;
-    }
+	list-style: none;
+	margin:0;
+	padding:0;
+	width: 100%;
+}
+.footer li {
+	text-align: center;
+
+.footer li a {
+	color: green;
+	text-decoration: underline;
+	height: 20px;
+	line-height: 20px;
+	display: block;
+}
+.footer li a:hover {
+	color: white;
+}
