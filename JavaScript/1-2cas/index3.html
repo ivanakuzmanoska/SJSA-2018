@@ -4,24 +4,34 @@
     <title></title>
     <script type="text/javascript">
 
-    //alert("Semos");
-    //console.log("Ivana");
-    // prompt("What's your name?");
+    //alert("Semos");           - prozorce za alert
+    //console.log("Ivana");      - sto da se pojavi vo konzola
+    // prompt("What's your name?");   - koga ke s epokavi prozorce da se pojavi input pole , vp zagradi prasanjeto koe ke s epojavi
+
+
+
 
      //Variables
 
-   // var color;
+   // var color;  - so var se deklarira promenliva, so ; samo se deklarira a so = se zadava vrednost
    // var car;
-   // var movie = "Pulp Fiction";
+   // var movie = "Pulp Fiction"; - Pulp Fiction e vrednosta na promenlivata
    // var name, age;
    // color = "red";
    // age = 24;
 
-   // var song = "song";
+   // var song = "song";   s so mala i S so golema  ralicna promenlica, JS e case sensitive
   //  var Song = "songg";
   //  var Age = "24";
 
   //  console.log(song);
+
+
+
+// if - struktura koja ja koristime sto da se sluci ako nekoj uslov e ispolnet ili ne
+  //   vo mali agradi se pisuva usloviot
+ //   ako ima dve == gi sporeduva spored vrednost, a ako ima === gi sporeduva spored podatocen strng
+
 
    // if(song =="song"){
    //     console.log("tocno");
@@ -58,8 +68,8 @@
 
  //   var color="yellow";
 
- //   if(color =="red"){
-  //      console.log("the color is red");
+ //   if(color =="red"){                    // Ako prviot uslov ne e ispolnet, proveri go drugiot, i natamu
+  //      console.log("the color is red");          // se se pisuva vo {}
  //   }else if (color =="Blue"){
   //      console.log("the color is blue");
  //   }else if (color =="yellow"){
@@ -78,9 +88,12 @@
 //     conole.log ("You can't log in")
 // }
 
+
+
+
 // var day ="Petok";
 
-/// switch(day){
+/// switch(day){               // switch case e slicno ako if, else if.... so toa sto sintaksata na swith vo mali () prakja 
  //    case"Ponedelinik":
   //   console.log("Denes e ponedelnik");
   //   break;
@@ -92,6 +105,17 @@
  //    break;
  //  default:console.log ("Nepoznat den");
 // }
+
+
+
+
+// nizite s estrukturi vo koi moeme da smestime podatoci od ist podatocen tip
+// taa lista od produkti na primer , e niza Array, taa ista od podatoci , namesto sekoj pat da definirame promenlivi
+//gi grupirame tie poatoci i koristime Notification
+//dva nacini da se definiraat nizi 
+//1 e so New Arraya vtoriot so []
+//najvazno za nii e toa sto elemenitie se podredeni po indeksi, 0,1,2,3
+//do tie elementi se pristapuva so  imeto na nizata pa [] i vo zagradite promenlica, koja ima integer broj
 
 // var colors = new Array("red","green","blue");
 // var other_colors = ["cyan","magenta","yellow","carbon"];
@@ -114,7 +138,22 @@
 // console.log(master_colors);
 //
 
-// for
+
+
+
+
+
+
+// for  e ciklus kade zadavas nekoj ciklus. for e sturkura vo js koja sluzi a povtoruvanje na naredbi odreden broj pat
+// ako treba nesto da se sluci odreden broj pati 
+//  for(vnatre oddeleni se so ;(tocka zapirka)), a site se staveni vo () mali zagradi
+//  primer   for(var=1(pocetna varijabla);(i<=10 pa imas proverka logickiot izraz, kolku pat treba da se povtori; i++(krajniot del sluzi za inkremetiranje ili 
+//   dekremenetiranje onosno namaluvanje ili zgolemuvanje na vrednost - to ke se slucuva ) )) {console.log("Jas imam"+i);};  = stavas fraerski zadradi i azvrsuvas so ;
+// mora da se vnimava deka vo vtoriot moment mora da ima break, na primer da dodje do 10, odnosno da ima presvrt vo odbrojuvanjeto
+
+
+
+
 
 // var count;
 // for(count = 0; count<10; count++){
@@ -132,7 +171,13 @@
  // }
 // }
 
-//while 
+
+
+
+
+
+//while   fukcionira slicno dkako for, samo sto odnapred se definiraat variablite
+
 
 
 var i = 0;
@@ -143,7 +188,7 @@ while(i<5){
 
 
 
-var j = 0;
+var j = 0;          // razlika so privoe e sto ovoj ednas barem sigurno ke se izvrsi 
 do{
     console.log("J = "+ j);
     j++;

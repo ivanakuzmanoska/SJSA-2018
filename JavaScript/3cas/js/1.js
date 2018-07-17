@@ -1,15 +1,15 @@
  // var my_first_object = {firstname : "Sanja", lastname : "Taskovska"};
-// var person = "Sanja";
-// var another_person = person;
-// person ="Dijana";
+// var person = "Sanja";        //VO FRAERSKI ZAGRADI SE DEFINIRA OBJEKT!!!
+// var another_person = person;   //VREDNOSTA MOZE DA BIDE, STRING, INTEGER ILI NIZA
+// person ="Dijana";          
 // another_person = person;
 
 // console.log(another_person);
 // console.log(person);
 
 // var licnost = {name: "Semos"};
-// var druga_licost = licnost;
-// licnost.name = "Petko";
+// var druga_licost = licnost;       //DODELUVANJE NA DRUGA LICNOST
+// licnost.name = "Petko";        //SO TOCKATA S EPRISTAPVA DO SVOJSTVOOT NA TOJ OBJEKT
 
 // console.log(druga_licost.name);
 // console.log(licnost.name);
@@ -23,7 +23,11 @@
 // var a = {test: 6};
 // console.log(a.test);
 
-// var mug = new Object();
+
+
+// 2  NACIN DA SE DEINIRAAT OBJEKTI !!! SO NEW OBJECT
+
+// var mug = new Object();   
 // mug.color = "white";
 // console.log(mug.color);
 
@@ -133,3 +137,7 @@ while(i<=5){
 }
 document.write(result);
 
+var i = 0;
+while(i<=5){
+  document.write("<br>")
+}
