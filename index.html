@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <style>
+        .list {
+
+        }
+        .list li {
+            float: left;
+            margin-left: 30px;
+            position: relative;
+            z-index: 2;
+
+        }
+        
+        .list li::before {
+            content: "";
+            display: block;
+            width: 15px;
+            height: 15px;
+            background-color: yellow; 
+            position: absolute;
+            top: 0;
+            left: -20;
+            border: 1px solid gray;
+            z-index: 1;
+
+        }
+        
+        .navigacija {
+            width: 150px;
+            list-style: none;
+            background-color: silver;
+            padding: 10px;
+            margin: 0;
+        }
+
+        .navigacija ul {
+            width: 150px;
+            list-style: none;
+            background-color:gray;
+            color: white;
+            padding: 10px;
+            margin: 0;
+            display: none;
+        }
+
+        .navigacija li:hover ul {
+            display: block;
+        }
+        </style>
+    </head>
+    <body>
+        <!-- <ol class="list">
+            <li>Lubenica</li>
+            <li>Domati</li>
+            <li>Jagodi</li>
+            <li>Jabolka</li>
+            <li>Portokali</li>
+            <li>Krusi</li>
+        </ol>
+ -->
+
+        <ul class="navigacija">
+            <li>
+                boi
+                <ul>
+                    <li>Bela</li>
+                    <li>Crna</li>
+                    <li>Ciklama</li>
+                </ul>
+            </li>
+            <li>
+                godisni vreminja
+                <ul>
+                    <li>prolet</li>
+                    <li>leto</li>
+                     <li>esen</li>
+                     <li>brrr...</li>
+                </ul>
+            </li>
+            <li>
+                avtomobili
+                <ul>
+                    <li>bmw</li>
+                    <li>fiko</li>
+                    <li>mazda</li>
+                </ul>
+            </li>
+        </ul>
+
+        <input class="ime">
+        <button class="btn">Zdravo</button>
+    
+    <script>
+            
+            var btn = document.querySelector(".btn");
+            var ime = document.querySelector(".ime");
+
+            btn.addEventListener("click", function() {
+        
+                alert("Zdravo"+ ime.value);
+            });
+        
+        </script>
+
+    </body>
+</html>
