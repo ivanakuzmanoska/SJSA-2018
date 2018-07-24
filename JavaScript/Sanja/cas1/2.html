@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<button id="button">Show me the date</button>
+	<h2 id="resut"></h2>
+	<button id="light_on">Turn the light on</button>
+	<img src="https://www.w3schools.com/js/pic_bulboff.gif">
+	<button id="light_off">Turn the light off</button>
+
+
+	<script type="text/javascript">
+	
+	document.getElementById("button").addEventListener("click", function(){
+		document.getElementById("resut").innerHTML = new Date();
+	});	
+
+	document.getElementById("light_on").addEventListener("click", function(){
+		document.getElementsByTagName("img")[0].attributes[0].value = "https://www.w3schools.com/js/pic_bulbon.gif";
+	});
+
+	document.getElementById("light_off").addEventListener("click", function(){
+		document.getElementsByTagName("img")[0].attributes[0].value = "https://www.w3schools.com/js/pic_bulboff.gif";
+	});
+
+	</script>
+
+</body>
+</html>

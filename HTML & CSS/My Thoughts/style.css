@@ -1,0 +1,114 @@
+body {
+    width: 1250px;
+    height: 2000px;
+    margin: 0 auto;
+    padding: 0;
+    font-family: Lucida;
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, #327495),
+	color-stop(1, #99B351)
+);
+background-image: -o-linear-gradient(bottom, #327495 0%, #99B351 100%);
+background-image: -moz-linear-gradient(bottom, #327495 0%, #99B351 100%);
+background-image: -webkit-linear-gradient(bottom, #327495 0%, #99B351 100%);
+background-image: -ms-linear-gradient(bottom, #327495 0%, #99B351 100%);
+background-image: linear-gradient(to bottom, #327495 0%, #99B351 100%);
+}
+main {
+    width:960px;
+    height: 2000px;
+    margin: 0 auto;
+    background: repeating-linear-gradient( -45deg, #000 0px, #000 5px, #333 6px, #333 11px, #000 12px);
+ 
+}
+header {
+    width: 949px;
+    height: 80px;
+    background: rgba(0, 0, 0, .1)
+}
+.logo {
+    width:196px;
+    height:80px;
+    /*margin:10px 0 10px 10px; */
+}
+nav {
+    width: 400px;
+    height: 30px;
+    float: right;
+    background: green;
+    margin:29px 0;
+
+}
+.navigacija {
+    width: 400px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    background: grey;
+    list-style: none;
+
+}
+.navigacija li {
+    float: left;
+    margin: 10px 10px 0 0;
+}
+.navigacija li a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.navigacija:last-child {
+    margin: 0;
+  }
+.left {
+    margin: 0;
+    width: 680px;
+    height: 1500px;
+    background:black;
+    float: left;
+    border-right: 5px solid gray;
+    border-radius: 5px;
+}
+.posts {
+    width: 650px;
+    height: 1470px;
+    margin: 15px;
+    padding: 5px 0 0 0;
+    background:black;
+    list-style: none;
+    font-family: Lucida;
+}
+.posts li {
+    border-bottom: 5px solid gray;
+    border-radius: 5px;
+}
+h1,p {
+    color: white;
+}
+.slika1,.slika2 {
+    padding: 20px 0;
+}
+.posts li a {
+    display: block;
+    width: 100px;
+    height: 30px;
+    background: blue;
+    color: white;
+    text-align: center;
+    font-size: 15px;
+    text-decoration: none;
+    border-radius: 2px;
+    margin:5px;
+    padding: 8px 0 0 0;
+
+}
+.right {
+    margin: 0;
+    width: 270px;
+    height: 1500px;
+    background: black;
+    float: right;
+}
