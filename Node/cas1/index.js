@@ -81,7 +81,7 @@
 
 // nizi
 
-var integer = [2, 5, 8, 10, 56, 3, 9, 12];   
+// var integer = [2, 5, 8, 10, 56, 3, 9, 12];   
 
 // ako e deliv so /3 da se ispecati buzz ako e deliv so /5 fiz
 
@@ -99,5 +99,76 @@ var integer = [2, 5, 8, 10, 56, 3, 9, 12];
 
 // }
 
-integer[100] = 50;   //dodadi element na 100to mesto!!!!
-console.log(integer);
+// integer[100] = 50;   //dodadi element na 100to mesto!!!!
+// console.log(integer);
+
+
+
+
+//  whie sintaksa
+
+// while( uslov ) {
+
+
+// }
+
+
+// ist brojac vo povekje primeri 
+
+
+ var brojac = 0;  
+
+ // for(let i = 10; i > brojac; i--){  //primer so for
+//     console.log(i);
+// }
+
+// while(brojac < 10){              //primer so while
+//     brojac++;
+//     console.log(brojac);
+// }
+
+// do {                                //primer so do
+//     brojac++;
+//     console.log(brojac);
+// }
+// while( brojac < 10)
+
+
+// zadaca za doma 
+// iza koja ke se vika username
+// vo taa nizastavete tri imina
+// posle da kreirame nov aniza koja ke se vika password
+
+// var names = ["iva", "ana", "marija"]
+
+// var pass = ["a", "bb", "000"]
+
+// prviot cle e soodveten so pass na vtorata nizastavete
+
+// nova promenliva
+
+//  var myName = "ana"
+//  var myPas = "bbb"
+
+//  prvo da se proveruva dali postoi clen sto se vika Ana potoa ako ima AnalyserNodeda se provri dali passwordot sto 
+//  ke go vnese ana e tocen so toj vo niza
+
+
+//  so if name od i == my name i mypas e so passwordot
+
+var names = ["iva", "ana", "marija"];
+
+var pass = ["a", "bb", "000"];
+
+var myName = "ana";
+var myPass = "bbb";
+
+for (let i=0; i<name.length; i++){
+    
+    if(names[i] == myName && pass[i] == myPass){
+        console.log("logged in");
+    }
+    else{
+        console.log("error");
+    }
+}
