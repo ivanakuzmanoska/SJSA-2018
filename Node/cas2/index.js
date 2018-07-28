@@ -79,29 +79,97 @@
 //     console.log("Hello from self-invoked function");
 // }())
 
-var myNiza = ["we", 5, 10, "learn", 4, "Javascript"];
+// var myNiza = ["we", 5, 10, "learn", 4, "Javascript"];
 
-var finalString = "";
+// var finalString = "";
 
-for(let i = 0; i<myNiza.length; i++){
+// for(let i = 0; i<myNiza.length; i++){
 
-    if(isNaN( myNiza[i]) ){
-       // finalString.concat(myNiza[i]);
+//     if(isNaN( myNiza[i]) ){
+//        // finalString.concat(myNiza[i]);
 
-            finalString += myNiza[i]+" ";
-    }
+//             finalString += myNiza[i]+" ";
+//     }
     
-    else{
-        let zbir = soberiSledbenik(myNiza[i]);
-        console.log(zbir);
+//     else{
+//         let zbir = soberiSledbenik(myNiza[i]);
+//         console.log(zbir);
 
-    }
+//     }
+// }
+
+// console.log(finalString);
+
+// function soberiSledbenik(broj){
+//     let sledbenik = broj + 1;
+
+//     return broj + sledbenik;
+// }
+
+
+var person = {
+	firstName: "Iva",
+	lastName: "Pivkova",
+	age: 24,
+	sex: "F",
+	
+	getFullName: function(){
+		return this.firstName + " " + this.lastName;
+	},
+
+	getNameAndAge: function(){
+		return this.firstName + " " + this.age;
+	}
 }
 
-console.log(finalString);
 
-function soberiSledbenik(broj){
-    let sledbenik = broj + 1;
+var person1 = {
+	firstName: "Petko",
+	lastName: "Petkov",
+	age: 10,
+	sex: "M",
+	
+	getFullName: function(){
+		return this.firstName + " " + this.lastName;
+	},
 
-    return broj + sledbenik;
+	getNameAndAge: function(){
+		return this.firstName + " " + this.age;
+	}
 }
+
+
+console.log(person1.getNameAndAge());
+
+
+var niza = [];
+
+niza.push(person);
+niza.push(person1);
+
+person1.firstName;
+console.log(person1['firstName']);
+
+for(let i=0; i<niza.length; i++){
+	if(niza[i].age >= 18){
+		console.log(niza[i].getNameAndAge());
+	}
+	
+}
+
+
+
+var property = {
+	type: "house/flat",
+	m2: "50",
+	price_m2: "1000",
+	balcony: "5",
+
+	getFullPrice: function(){
+		return (parseInt(this.m2) + parseInt(this.balcony) ) * this.price_m2;
+	}
+}
+
+//Da se kreiraat 10 objekti so razlicni type, m2, price_m2. 
+//Da se stavat vo niza. Da se ispecatat onie objekti koi se od type flat, povrsina pomala od 60m2 
+//i cena pomala od 1000e.
