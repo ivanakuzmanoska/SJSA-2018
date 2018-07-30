@@ -53,6 +53,20 @@ var fs = require("fs");
 
 // rabota so fs moduli 
 
-fs.readFile('myFile.txt', 'utf-8', (data, ) =>{
+fs.readFile('myFile.txt', 'utf-8', (err, data) =>{
+    if(err) throw err;
 
+    else{
+        console.log(data);
+    }
 })
+
+
+fs.writeFile("myFile2.txt", "test", (err) =>{
+    if(err) throw err;
+  
+    else{
+      
+        console.log("uspesno zapisano");
+    }
+});
