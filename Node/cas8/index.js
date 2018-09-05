@@ -11,7 +11,7 @@ app.listen(port);
 
 app.set('view engine', 'ejs');
 app.use(myParser.urlencoded({extended: true}));
-app.use(session{secret: 'semos'})
+app.use(session({secret: 'semos'}));
 
 
 var users = [];
@@ -36,6 +36,7 @@ app.post('/login', (req, res) =>{
     console.log(password);
 
     sess = req.session;
+  
     sess.email=email;
     
     res.redirect('/profile');
@@ -74,5 +75,14 @@ app.get('/profile', (req, res) =>{
 
     }
 
-    res.render('profile');
+});
+
+app.get ('/logout', (req, res) =>{
+
+    req.session.destroy(err =>{
+        if(err) console.log(err);
+        else{
+            res.redirect('/login');
+        }
+    })
 });
