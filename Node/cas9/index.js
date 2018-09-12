@@ -9,8 +9,13 @@ const bodyParser = require('body-parser');
 
 const recipe = require("./recipe");
 
+const session = require('express-session');
+
+var sess;
+
 app.use(bodyParser.urlencoded({extended:true}))
 app.set('view engine', 'ejs');
+app.use(session({secret: 'cas9'}));
 
 app.listen(8000);
 
@@ -24,33 +29,66 @@ mongoClient.connect(url, (err, client) =>{
 
 });
 
+app.get('/', (req, res) => {
+    res.render('index');
+})
+
+app.get('/login', (req, res) => {
+    res.render('login');
+})
+
+app.post('/login', (req, res) =>{
+    sess = req.session;
+    sess.email = '123';
+
+    res.redirect('/newRecipe');
+})
+
 app.get('/newRecipe', (req, res) => {
-    res.render('newrecipe');
+    res.render('newRecipe');
 })
 
 app.post('/newRecipe', (req, res) => {
-    let recName = req.body.recName;
-    let ingridients = req.body.ingridients;
-    let prepTime = req.body.prepTime;
+	let recName = req.body.recName;
+	let ingridients = req.body.ingridients;
+	let prepTime = req.body.prepTime;
 
-    let r = new recipe.create(recName, ingridients, prepTime);
-    console.log(r);
+	let r = new recipe.create(recName, ingridients, prepTime);
+	console.log(r);
 
-    db.collection('recipes').insertOne(r, (err) =>{
-        if(err) console.log(err);
-        else{
-            console.log("new recipe added");
-            res.render('allRecipes');
-        }
-    })
+	db.collection('recipes').insertOne(r, (err) =>{
+		if (err) console.log(err);
+		else{
+			console.log("new recipe added");
+			res.redirect('allRecipes');
+		}
+	})
 })
- app.get('allRecipes', (req, res) => {
 
-    db.collection('recipes').find({}).toArray((err, result) =>{
-        res.render('allRecipes', {recipes: result})
+app.get('/allRecipes', (req, res) =>{
+
+	db.collection('recipes').find({}).toArray((err, result) =>{
+        // res.send(result);
+		res.render('allRecipes', {recipes: result});
+
+	})
+})
+
+
+app.get('/recipes', (req,res) =>{
+    let time = req.query.time;
+
+    // db.collection('recipes').find({prepTime: time}).toArray((err, result) => {
+    //     res.send(result);
+
+    // })
+
+    db.collection('recipes').find({ingredients: {$regex: ".*eggs.*"}}).toArray((err, result)=>{
+        // res.send(result);
+        res.render('allRecipes', {recipes: result});
     })
- })
 
+})
 
         // var myObject = {
         //     name: 'Ivana',
