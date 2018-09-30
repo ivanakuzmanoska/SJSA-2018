@@ -159,16 +159,16 @@ for(let i=0; i<niza.length; i++){
 
 
 
-var property = {
-	type: "house/flat",
-	m2: "50",
-	price_m2: "1000",
-	balcony: "5",
+// var property = {
+// 	type: "house/flat",
+// 	m2: "50",
+// 	price_m2: "1000",
+// 	balcony: "5",
 
-	getFullPrice: function(){
-		return (parseInt(this.m2) + parseInt(this.balcony) ) * this.price_m2;
-	}
-}
+// 	getFullPrice: function(){
+// 		return (parseInt(this.m2) + parseInt(this.balcony) ) * this.price_m2;
+// 	}
+// }
 
 //Da se kreiraat 10 objekti so razlicni type, m2, price_m2. 
 //Da se stavat vo niza. Da se ispecatat onie objekti koi se od type flat, povrsina pomala od 60m2 

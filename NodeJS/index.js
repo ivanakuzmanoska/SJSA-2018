@@ -10,8 +10,13 @@ const options = {
     useNewUrlParser: true
 }
 
-var db = mongoose.connect('mongodb://127.0.0.1:27017/semos1',options);
-console.log(db);
+mongoose.connect('mongodb://127.0.0.1:27017/semos1', options)
+.then((conn) => {
+    console.log(conn);
+})
+.catch((err) => {
+    console.log(err);
+})
 
 var app = express();
 
