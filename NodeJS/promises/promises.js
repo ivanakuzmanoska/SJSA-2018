@@ -91,7 +91,7 @@ var getAllUsers = () => {
             'stojanko'
         ];
         if(condition == true){
-            return resolve(users);
+            return resolve(users); // funkcijata sto se povikva vo then 
         } else {
             return reject('no users found');
         }
@@ -115,10 +115,10 @@ var calculateUsers = (users) => {
 // console.log(getAllUsers());
 
 getAllUsers()
-.then((u) => {
+.then((u) => {                      // u e datata sto ja vrakja resolve
     return calculateUsers(u);
 })
-.then((total) => {
+.then((total) => {              // samo funkicjata akovrakja promise ,moze da stavime novo then, akone vrakja stavame catch
     console.log(total);
 })
 .catch((err) => {
