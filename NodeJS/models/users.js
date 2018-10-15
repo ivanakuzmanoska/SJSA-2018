@@ -5,10 +5,11 @@ var mongo = require("../db/mongo");
 var Users = mongoose.model(         //model sto ke se koristi ponatamu samo so copy past
     'users',                        //kreiras model, pa ja definiras semata na samiot model
     new mongoose.Schema({
-        "_id": mongoose.SchemaTypes.ObjectId,
         "firstname" : String, 
               "lastname" : String, 
                  "email" : String, 
+                 "password" : String,
+                 "role" : String,
                  "location" : {
                  "country" : String,
                  "city" :  String, 
@@ -18,7 +19,7 @@ var Users = mongoose.model(         //model sto ke se koristi ponatamu samo so c
 );
 
 var getAllUsers = (cb) => {
-    Users.find({}, (err, data) => {
+    Users.find({}, {password: -1}, (err, data) => {
     if(err){
         return cb(err, null);
     }
@@ -30,6 +31,17 @@ var getAllUsers = (cb) => {
 
 var getUsersByName = (name, cb) => {
     Users.find({firstname: name}, (err, data) => {
+    if(err){  
+        return cb(err, null);
+    }
+    else {
+        return cb(null, data);
+    }
+});
+};
+
+var getUserByEmail = (email, cb) => {
+    Users.findOne({email: email}, {password: 1, role: 1, firstname: 1, lastname: 1, email: 1}, (err, data) => {
     if(err){  
         return cb(err, null);
     }
@@ -84,6 +96,7 @@ var updateById = (id, data, cb) => {
 module.exports = {
     getAllUsers,
     getUsersByName,
+    getUserByEmail,
     getUserById,
     createUser,
     deleteById,

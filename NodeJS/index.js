@@ -32,7 +32,10 @@ app.use(jwt(
     { 
         secret: 'pero_e_haker'
     }).unless({
-        path: ['/login']
+        path: ['/login', 
+        { url:'/login', methods: ['POST']},
+        { url: '/users', methods: ['POST']}
+    ]
     })
 );
 
@@ -40,7 +43,7 @@ app.use(jwt(
 app.get('/', root);
 
 app.post('/login', auth.login);
-app.get('/logout', auth.logout);   
+app.get('/logout', auth.logout);  // logout(req, res); 
 
 app.get('/users', users.getAllUsers);
 app.get('/users/name/:name', users.getUserByName);
