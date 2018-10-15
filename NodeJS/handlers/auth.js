@@ -14,7 +14,7 @@ var login = (req, res) => {
                     name: userData.firstname + ' ' + userData.lastname,
                     role: userData.role
                 };
-                 var token = jwt.sign(userData, 'pero_e_haker');
+                 var token = jwt.sign(ud, 'pero_e_haker');
                  return res.send(token);
          } else {
              return res.status(403).send("Unauthorised");
