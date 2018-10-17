@@ -8,7 +8,7 @@ var auth = require('./handlers/auth');  //files vo koi gi stavuvame hendelite od
 var root = require('./handlers/root');  //url so dr ime se vikaat end points
 var users = require('./handlers/users');    // sekoj end point mora da ima funkicja otkako ke se otide a toj url
 var cv = require('./handlers/cvs');
-
+var films = require('./handlers/films')
 var mongoose = require('mongoose');
 
 const options = {
@@ -57,6 +57,9 @@ app.put('/cv/:id', cv.updateCVById);
 app.delete('/cv/:id', cv.deleteCVById);
 app.get('/cv', cv.getAllCVs);
 app.get('/cv/:id', cv.getCVById);
+
+app.post('/films', films.addFilm);
+app.get('/films', films.getAllFilms);
 
 app.use(function (err, req, res, next) {
     if (err.name === 'UnauthorizedError') {
