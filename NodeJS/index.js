@@ -9,32 +9,20 @@ var root = require('./handlers/root');  //url so dr ime se vikaat end points
 var users = require('./handlers/users');    // sekoj end point mora da ima funkicja otkako ke se otide a toj url
 var cv = require('./handlers/cvs');
 var films = require('./handlers/films')
-var mongoose = require('mongoose');
 
-const options = {
-    useNewUrlParser: true
-}
-
-mongoose.connect('mongodb://127.0.0.1:27017/semos1', options)
-.then((conn) => {
-    console.log(conn);
-})
-.catch((err) => {
-    console.log(err);
-})
 
 mongo.Init();
 
 var app = express();
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
-app.use(jwt(
-    { 
+app.use(jwt({ 
         secret: 'pero_e_haker'
     }).unless({
         path: ['/login', 
         { url:'/login', methods: ['POST']},
-        { url: '/users', methods: ['POST']}
+        { url: '/users', methods: ['POST']},
+        {url: '/films', methods: ['POST', 'GET']},
     ]
     })
 );
@@ -63,7 +51,7 @@ app.get('/films', films.getAllFilms);
 
 app.use(function (err, req, res, next) {
     if (err.name === 'UnauthorizedError') {
-      res.status(401).send('invalid token...');
+      res.status(401).send('Invalid token...');
     }
   });
 
