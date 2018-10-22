@@ -9,15 +9,11 @@ var auth = require('./handlers/auth');  //files vo koi gi stavuvame hendelite od
 var root = require('./handlers/root');  //url so dr ime se vikaat end points
 var users = require('./handlers/users');    // sekoj end point mora da ima funkicja otkako ke se otide a toj url
 var cv = require('./handlers/cvs');
-<<<<<<< HEAD
-var films = require('./handlers/films')
-=======
 var films = require('./handlers/films');
 var upload = require('./handlers/upload')
 
 
 var mongoose = require('mongoose');
->>>>>>> c6d47443853c40c65e06b6e52bfec11c6ec4e217
 
 
 mongo.Init();
@@ -31,12 +27,8 @@ app.use(jwt({
         path: ['/login', 
         { url:'/login', methods: ['POST']},
         { url: '/users', methods: ['POST']},
-<<<<<<< HEAD
-        {url: '/films', methods: ['POST', 'GET']},
-=======
-        { url: '/films', methods: ['POST','GET']},
-        { url: '/upload', methods: ['POST']}
->>>>>>> c6d47443853c40c65e06b6e52bfec11c6ec4e217
+        { url: '/films', methods: ['POST', 'GET']},
+        { url: '/upload', methods: ['POST']},
     ]
     })
 );
@@ -44,7 +36,8 @@ app.use(jwt({
 
 app.use(fileUpload({
     limits: {
-    fileSize: 50 * 1024 * 1024 }
+    fileSize: 50 * 1024 * 1024
+ }
 }));
 
 app.get('/', root);
