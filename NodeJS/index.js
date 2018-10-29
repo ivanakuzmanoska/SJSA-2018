@@ -13,12 +13,10 @@ var films = require('./handlers/films');
 var upload = require('./handlers/upload')
 
 
-var mongoose = require('mongoose');
-
-
 mongo.Init();
 
 var app = express();
+
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
 app.use(jwt({ 
@@ -42,8 +40,8 @@ app.use(fileUpload({
 
 app.get('/', root);
 
-app.post('/login', auth.login);
-app.get('/logout', auth.logout);  // logout(req, res); 
+app.post('/auth/login', auth.login);
+app.get('/auth/logout', auth.logout);  // logout(req, res); 
 
 app.get('/users', users.getAllUsers);
 app.get('/users/name/:name', users.getUserByName);
