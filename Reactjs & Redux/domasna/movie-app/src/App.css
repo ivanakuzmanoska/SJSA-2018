@@ -1,0 +1,10 @@
+.App {
+    text-align: center;
+}
+
+.movie-info {
+    float: left;
+}
+.stars {
+    float: right
+}
