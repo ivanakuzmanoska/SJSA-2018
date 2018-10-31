@@ -3,7 +3,7 @@ import { Avatar } from "./Avatar";
 
 export const UserInfo = (props) => {
     return (
-    <div classsName="user-info">
+    <div className="user-info">
       <Avatar data={props.data} />
     
      <h2>{props.data.first_name} {props.data.last_name}</h2>
