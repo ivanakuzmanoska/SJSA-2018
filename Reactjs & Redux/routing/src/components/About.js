@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 
-export  class About extends React.Component {
-    
+export class About extends React.Component {
     render(){
-        return (
-           <div className="about">
-          <h2>you can find...</h2>
-
-        </div>
-    )
-}
+        return(
+            <div className="about">
+                <h2>You can find stuff in about...</h2>
+            </div>
+        )
+    }
 }

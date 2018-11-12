@@ -1,33 +1,26 @@
-import React from 'react';
+import React from "react";
 import { NavLink } from "react-router-dom";
 
 export const Header = () => {
     return (
         <header>
             <ul>
-                    <li>
-                     <NavLink exact activeClassName="active" to="/">Home</NavLink>
-                    </li>
-                   
-                    <li>
+                <li>
+                    <NavLink exact activeClassName="active" to="/">Home</NavLink>
+                </li>
+
+                <li>
                     <NavLink activeClassName="active" to="/about">About</NavLink>
-                    </li>
-                   
-                    <li>
+                </li>
+
+                <li>
                     <NavLink activeClassName="active" to="/contact">Contact</NavLink>
-                    </li>
-                     
-                    <li>
+                </li>
+
+                <li>
                     <NavLink activeClassName="active" to="/users">Users</NavLink>
-                    </li>
-           
-
-
+                </li>
             </ul>
-
-
-
-
         </header>
     )
 }
